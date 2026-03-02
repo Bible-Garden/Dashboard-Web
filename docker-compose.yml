@@ -19,7 +19,7 @@ services:
     environment:
       - NODE_ENV=development
       - VITE_ALIGNMENT_API_TARGET=${VITE_ALIGNMENT_API_TARGET:-http://localhost:8002}
-      - VITE_BIBLE_API_TARGET=${VITE_BIBLE_API_TARGET:-https://localhost:8001/api}
+      - VITE_BIBLE_API_TARGET=${VITE_BIBLE_API_TARGET:-https://localhost:8085/api}
     stdin_open: true
     tty: true
     networks:

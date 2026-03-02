@@ -18,10 +18,12 @@ coverage
 /cypress/videos/
 /cypress/screenshots/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
+# Editor and tool directories
+.vscode/
 .idea
+.agent/
+.pytest_cache/
+.testers-ai/
 *.suo
 *.ntvs*
 *.njsproj

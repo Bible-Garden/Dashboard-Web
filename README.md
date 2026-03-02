@@ -2,7 +2,7 @@
 
 Web application for managing and analyzing forced alignment data of Bible audio and text. Supports working with voices, anomalies, alignment tasks, and authorization.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Install dependencies
@@ -18,16 +18,16 @@ npm run dev
 
 The application will be available at `http://localhost:5173`
 
-## 📋 Main Features
+## Main Features
 
-- **🎧 Voice Management** - view and manage translation voices
-- **⚠️ Anomaly Handling** - analyze and correct alignment anomalies
-- **🔍 Bible Inspector** - view chapters with audio and timing
-- **⏱️ Alignment Tasks** - create and monitor MFA tasks
-- **🔐 Authorization** - API key for reading, JWT for changes
-- **🎨 Dark Theme** - automatic system theme detection
+- **Voice Management** - view and manage translation voices
+- **Anomaly Handling** - analyze and correct alignment anomalies
+- **Bible Inspector** - view chapters with audio and timing
+- **Alignment Tasks** - create and monitor MFA tasks
+- **Authorization** - API key for reading, JWT for changes
+- **Dark Theme** - automatic system theme detection
 
-## 🛠️ Technologies
+## Technologies
 
 - Vue 3 + TypeScript
 - Vite 5.4.19
@@ -35,7 +35,7 @@ The application will be available at `http://localhost:5173`
 - Axios for API
 - Lucide for icons
 
-## 📦 Build
+## Build
 
 ```bash
 # Production build
@@ -45,7 +45,7 @@ npm run build
 npm run preview
 ```
 
-## 📁 Structure
+## Structure
 
 ```
 /src
@@ -58,7 +58,7 @@ npm run preview
 /docs               - Documentation
 ```
 
-## 📚 Documentation
+## Documentation
 
 Full documentation is located in the **[docs/](docs/)** folder:
 
@@ -67,10 +67,14 @@ Full documentation is located in the **[docs/](docs/)** folder:
 - **[CHANGELOG.md](docs/CHANGELOG.md)** - Change history
 - **[EXCERPT_API.md](docs/EXCERPT_API.md)** - Excerpt API
 
-## 🔑 Authorization
+## Authorization
 
 Two access levels:
-- **API key** → read data (languages, translations, audio)
-- **JWT token** → modify data (voices, anomalies)
+- **API key** — read data (languages, translations, audio)
+- **JWT token** — modify data (voices, anomalies)
 
 Setup: create `.env` and specify `VITE_BIBLE_API_KEY`
+
+## License
+
+[GPLv3](LICENSE)
