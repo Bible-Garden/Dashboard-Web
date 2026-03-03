@@ -22,7 +22,9 @@ import type {
   MFAModelResponse,
   LanguageResponse,
   ModelType,
-  ModelsUpdateResponse
+  ModelsUpdateResponse,
+  StatsSummaryResponse,
+  RecentRequestsResponse
 } from '../types/api'
 import { authService } from './auth'
 import { API_CONFIG, isPublicEndpoint, isAdminEndpoint } from '../config/api'
@@ -270,6 +272,17 @@ export class ApiService {
 
   async updateModelsFromGitHub(): Promise<ModelsUpdateResponse> {
     const response = await this.api.post<ModelsUpdateResponse>('/models/update')
+    return response.data
+  }
+
+  // Stats endpoints
+  async getStatsSummary(days: number = 30): Promise<StatsSummaryResponse> {
+    const response = await this.api.get<StatsSummaryResponse>('/stats/summary', { params: { days } })
+    return response.data
+  }
+
+  async getRecentRequests(limit: number = 50): Promise<RecentRequestsResponse> {
+    const response = await this.api.get<RecentRequestsResponse>('/stats/recent', { params: { limit } })
     return response.data
   }
 }

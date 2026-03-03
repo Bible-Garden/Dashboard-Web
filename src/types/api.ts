@@ -214,6 +214,61 @@ export interface ModelsUpdateResponse {
   updated_languages: number
 }
 
+// API Stats types
+export interface StatsTotals {
+  total_requests: number
+  total_errors: number
+  avg_response_time_ms: number
+  unique_ips: number
+}
+
+export interface StatsToday {
+  requests: number
+  unique_ips: number
+  avg_response_time_ms: number
+  errors: number
+}
+
+export interface StatsDailyRow {
+  date: string
+  requests: number
+  unique_ips: number
+  avg_response_time_ms: number
+  errors: number
+}
+
+export interface StatsEndpointRow {
+  endpoint: string
+  requests: number
+  unique_ips: number
+  avg_response_time_ms: number
+  errors: number
+}
+
+export interface StatsSummaryResponse {
+  period_days: number
+  totals: StatsTotals
+  today: StatsToday
+  daily: StatsDailyRow[]
+  top_endpoints: StatsEndpointRow[]
+}
+
+export interface RecentRequestRow {
+  id: number
+  endpoint: string
+  method: string
+  status_code: number
+  response_time_ms: number
+  client_ip: string
+  user_agent: string
+  created_at: string
+}
+
+export interface RecentRequestsResponse {
+  items: RecentRequestRow[]
+  count: number
+}
+
 // Excerpt API types
 export interface ExcerptBookModel {
   code: number

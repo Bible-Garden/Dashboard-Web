@@ -37,6 +37,7 @@ export const ADMIN_ENDPOINTS = [
   '/manual-fixes',
   '/check_translation',
   '/check_voice',
+  '/stats/',
 ]
 
 /**

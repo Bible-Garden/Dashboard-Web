@@ -7,6 +7,7 @@ import BibleVoices from '../Components/BibleVoices.vue'
 import BibleAnomalies from '../Components/BibleAnomalies.vue'
 import BibleInspect from '../Components/BibleInspect.vue'
 import AlignmentTasks from '../Components/AlignmentTasks.vue'
+import ApiStats from '../Components/ApiStats.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,11 @@ const router = createRouter({
                     path: 'tasks',
                     name: 'alignment_tasks',
                     component: AlignmentTasks
+                },
+                {
+                    path: 'stats',
+                    name: 'stats',
+                    component: ApiStats
                 }
             ]
         },
