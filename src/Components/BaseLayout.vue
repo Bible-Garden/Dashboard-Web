@@ -94,8 +94,6 @@
                                                     : 'text-surface-500 dark:text-surface-400 group-hover:text-surface-900 dark:group-hover:text-surface-50'
                                             ]" />
                                             <span class="font-medium text-base leading-tight">Anomalies</span>
-                                            <Badge value="2" severity="contrast"
-                                                class="ml-auto !h-5 !min-w-5 !text-xs !font-bold !leading-tight !rounded-xl" />
                                         </a>
                                     </router-link>
                                 </li>
@@ -251,7 +249,6 @@
 </template>
 
 <script setup lang="ts">
-import Badge from 'primevue/badge'
 import Toast from 'primevue/toast'
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
