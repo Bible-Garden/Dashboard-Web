@@ -12,7 +12,7 @@
                 <div class="flex-1 overflow-y-auto p-2 flex flex-col gap-4">
                     <ul class="list-none p-0 m-0 flex flex-col gap-1">
 
-                        <!-- Alignments Group -->
+                        <!-- Monitoring Group -->
                         <li>
                             <div v-styleclass="{
                                 selector: '@next',
@@ -22,25 +22,25 @@
                                 leaveActiveClass: 'animate-slideup'
                             }"
                                 class="flex items-center cursor-pointer p-3 gap-4 rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-100 dark:hover:bg-surface-800 border border-transparent hover:border hover:border-surface-200 dark:hover:border-surface-700 transition-colors duration-150">
-                                <span class="font-semibold text-base leading-tight">Alignments</span>
+                                <span class="font-semibold text-base leading-tight">Monitoring</span>
                                 <ChevronDown class="w-5 h-5 text-surface-500 dark:text-surface-400 ml-auto" />
                             </div>
                             <ul class="list-none p-0 m-0 overflow-hidden flex flex-col gap-1">
                                 <li>
-                                    <router-link to="/tasks" custom v-slot="{ href, navigate, isActive }">
+                                    <router-link to="/stats" custom v-slot="{ href, navigate, isActive }">
                                         <a :href="href" @click="navigate" :class="[
                                             'flex items-center cursor-pointer p-3 gap-2 rounded-lg transition-colors duration-150 border group',
                                             isActive
                                                 ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 border-primary-200 dark:border-primary-800'
                                                 : 'text-surface-700 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-800 hover:text-surface-900 dark:hover:text-surface-50 border-transparent hover:border hover:border-surface-200 dark:hover:border-surface-700'
-                                        ]" data-testid="nav-alignment-tasks">
-                                            <Clock :class="[
+                                        ]" data-testid="nav-api-stats">
+                                            <BarChart3 :class="[
                                                 'w-5 h-5',
                                                 isActive
                                                     ? 'text-primary-600 dark:text-primary-400'
                                                     : 'text-surface-500 dark:text-surface-400 group-hover:text-surface-900 dark:group-hover:text-surface-50'
                                             ]" />
-                                            <span class="font-medium text-base leading-tight">Tasks</span>
+                                            <span class="font-medium text-base leading-tight">API Stats</span>
                                         </a>
                                     </router-link>
                                 </li>
@@ -114,41 +114,6 @@
                                                     : 'text-surface-500 dark:text-surface-400 group-hover:text-surface-900 dark:group-hover:text-surface-50'
                                             ]" />
                                             <span class="font-medium text-base leading-tight">Inspect</span>
-                                        </a>
-                                    </router-link>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- Monitoring Group -->
-                        <li>
-                            <div v-styleclass="{
-                                selector: '@next',
-                                enterFromClass: 'hidden',
-                                enterActiveClass: 'animate-slidedown',
-                                leaveToClass: 'hidden',
-                                leaveActiveClass: 'animate-slideup'
-                            }"
-                                class="flex items-center cursor-pointer p-3 gap-4 rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-100 dark:hover:bg-surface-800 border border-transparent hover:border hover:border-surface-200 dark:hover:border-surface-700 transition-colors duration-150">
-                                <span class="font-semibold text-base leading-tight">Monitoring</span>
-                                <ChevronDown class="w-5 h-5 text-surface-500 dark:text-surface-400 ml-auto" />
-                            </div>
-                            <ul class="list-none p-0 m-0 overflow-hidden flex flex-col gap-1">
-                                <li>
-                                    <router-link to="/stats" custom v-slot="{ href, navigate, isActive }">
-                                        <a :href="href" @click="navigate" :class="[
-                                            'flex items-center cursor-pointer p-3 gap-2 rounded-lg transition-colors duration-150 border group',
-                                            isActive
-                                                ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 border-primary-200 dark:border-primary-800'
-                                                : 'text-surface-700 dark:text-surface-200 hover:bg-surface-100 dark:hover:bg-surface-800 hover:text-surface-900 dark:hover:text-surface-50 border-transparent hover:border hover:border-surface-200 dark:hover:border-surface-700'
-                                        ]" data-testid="nav-api-stats">
-                                            <BarChart3 :class="[
-                                                'w-5 h-5',
-                                                isActive
-                                                    ? 'text-primary-600 dark:text-primary-400'
-                                                    : 'text-surface-500 dark:text-surface-400 group-hover:text-surface-900 dark:group-hover:text-surface-50'
-                                            ]" />
-                                            <span class="font-medium text-base leading-tight">API Stats</span>
                                         </a>
                                     </router-link>
                                 </li>
