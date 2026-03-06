@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: bible-dashboard
     ports:
-      - "5174:5173"
+      - "9086:5173"
     volumes:
       # Mount source code for hot reload
       - ./src:/app/src
@@ -19,7 +19,7 @@ services:
     environment:
       - NODE_ENV=development
       - VITE_ALIGNMENT_API_TARGET=${VITE_ALIGNMENT_API_TARGET:-http://localhost:8002}
-      - VITE_BIBLE_API_TARGET=${VITE_BIBLE_API_TARGET:-https://localhost:8085/api}
+      - VITE_BIBLE_API_TARGET=${VITE_BIBLE_API_TARGET:-http://localhost:9085/api}
     stdin_open: true
     tty: true
     networks:
